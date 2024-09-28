@@ -1,0 +1,35 @@
+{
+  "name": "nodejs-practice-tool",
+  "version": "1.0.0",
+  "description": "The **`node_ts_lab`** project is a learning and development environment built with **Node.js** and **TypeScript**. It is designed to help developers experiment with different Node.js features and modules, while leveraging TypeScript for type safety and enhanced tooling.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node -r tsconfig-paths/register src/dsa/practice_queue.ts",
+    "dev": "ts-node -r tsconfig-paths/register src/cli.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "nodemon": "^3.1.7",
+    "pm2": "^5.4.2",
+    "sqlite3": "^5.1.7",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.6.2"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksmooi/node_ts_lab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksmooi/node_ts_lab/issues"
+  },
+  "homepage": "https://github.com/ksmooi/node_ts_lab#readme"
+}
