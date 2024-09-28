@@ -1,4 +1,4 @@
-// npx ts-node -r tsconfig-paths/register src/dsa/queue_demo.ts
+// npx ts-node -r tsconfig-paths/register src/demo/dsa/queue_demo.ts
 
 import { Queue } from 'modules/dsa/queue';
 
@@ -25,10 +25,8 @@ for (const item of numberQueue) {
 // === Reverse Iteration ===
 console.log("\nIterating from rear to front:");
 const reverseIter = numberQueue.reverseIterator();
-let result = reverseIter.next();
-while (!result.done) {
+for (let result = reverseIter.next(); result.done == false; result = reverseIter.next()) {
     console.log(result.value);  // Expected: 30, 20, 10
-    result = reverseIter.next();
 }
 
 // === Deletion (Dequeue) ===
