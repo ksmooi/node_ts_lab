@@ -13,7 +13,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/commander": "^2.12.2",
     "@types/node": "^22.7.4",
+    "@types/nodemon": "^1.19.6",
+    "@types/sqlite3": "^3.1.11",
+    "commander": "^12.1.0",
     "nodemon": "^3.1.7",
     "pm2": "^5.4.2",
     "sqlite3": "^5.1.7",
@@ -31,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/ksmooi/node_ts_lab/issues"
   },
-  "homepage": "https://github.com/ksmooi/node_ts_lab#readme"
+  "homepage": "https://github.com/ksmooi/node_ts_lab#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
 }

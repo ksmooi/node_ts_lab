@@ -46,26 +46,20 @@ npm install tsconfig-paths --save-dev
 
 - **tsconfig-paths** enables path alias resolution in `tsconfig.json` when running TypeScript files with `ts-node`.
 
-#### Install SQLite3 for database operations:
-```bash
-npm install sqlite3 --save-dev
-```
+#### Installing Required Packages for the Project
 
-- **SQLite3** will be used as a simple embedded database for the project.
-
-#### Install Nodemon for automatic restarts in development:
-```bash
-npm install nodemon --save-dev
-```
-
-- **Nodemon** will automatically restart the server when files change during development.
-
-#### Install PM2 for process management in production:
 ```bash
 npm install pm2 --save-dev
+
+npm install nodemon commander sqlite3 --save-dev
+npm install @types/nodemon @types/commander @types/sqlite3 --save-dev
 ```
 
-- **PM2** is a production-ready process manager for Node.js that helps you keep your application running and monitor its performance.
+- These commands install the necessary development dependencies:
+  - **PM2**: A production process manager for Node.js applications, ensuring that your app stays alive and automatically restarts if it crashes.
+  - **Nodemon**: A tool that helps in automatically restarting the Node.js application when file changes in the directory are detected.
+  - **Commander**: A powerful CLI library used to build command-line applications and handle argument parsing.
+  - **SQLite3**: A lightweight SQL database engine for managing data storage in your Node.js application.
 
 ---
 
