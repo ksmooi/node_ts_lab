@@ -1,6 +1,6 @@
 # Introduction to the `node_ts_lab` Project
 
-The **`node_ts_lab`** project is a learning and development environment built with **Node.js** and **TypeScript**. It is designed to help developers experiment with different Node.js features and modules, while leveraging TypeScript for type safety and enhanced tooling.
+The `node_ts_lab` project is a learning and development environment built with **Node.js** and **TypeScript**. It is designed to help developers experiment with different Node.js features and modules, while leveraging TypeScript for type safety and enhanced tooling.
 
 This project provides various practical examples, such as working with data structures, file systems, networking (HTTP and WebSocket), and more. It also includes support for Docker, which allows you to containerize your applications for development and production environments.
 
