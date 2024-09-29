@@ -1,4 +1,4 @@
-import * as express from 'express';
+import express from 'express';  // Default import
 import { Request, Response } from 'express';
 
 // Initialize the express app
