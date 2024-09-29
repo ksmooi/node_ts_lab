@@ -5,28 +5,40 @@ WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json to install dependencies
 COPY package*.json ./
+
+# Install all dependencies (including devDependencies)
 RUN npm install
 
 # Copy the source code and build the TypeScript project
 COPY . .
 RUN npm run build
 
-# Stage 2: Run the application (production)
+
+# Stage 2: Run the application (development mode)
 FROM node:20.17.0-slim
 
 WORKDIR /usr/src/app
 
-# Copy only the compiled code from the first stage
-COPY --from=builder /usr/src/app/dist ./dist
+# Install Nano text editor
+RUN apt-get update && \
+    apt-get install -y vim nano && \
+    rm -rf /var/lib/apt/lists/*
 
-# Copy package.json and package-lock.json for installing production dependencies
-COPY package*.json ./
+# Add custom alias to .bashrc
+RUN echo "PS1='\u@\h:\w\$ '" >> ~/.bashrc && \
+    echo "alias ll='ls -l'" >> ~/.bashrc && \
+    echo "alias la='ls -a'" >> ~/.bashrc && \
+    echo "alias lsize='du -sh * | sort -rh'" >> ~/.bashrc && \
+    echo "alias du1='du -d 1 -h'" >> ~/.bashrc
 
-# Install only production dependencies using npm ci
-#RUN npm ci --only=production
+# Copy the compiled code and node_modules from the builder stage
+COPY --from=builder /usr/src/app /usr/src/app
 
 # Expose the application port
 EXPOSE 3000
 
-# Start the Node.js application
-CMD ["node", "dist/index.js"]
+# Set environment to development
+ENV NODE_ENV=development
+
+# Start the Node.js application in development mode
+CMD ["npm", "run", "dev"]
