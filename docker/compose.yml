@@ -1,20 +1,27 @@
-# command
+# Useful Docker commands
 # docker compose -f docker/compose.yml build
 # docker compose -f docker/compose.yml up
 # docker compose -f docker/compose.yml down
 # docker compose -f docker/compose.yml run app /bin/bash
 
+# List All Exited Containers
+# docker ps -a --filter "status=exited"
+
+# Remove All Exited Containers
+# docker rm $(docker ps -a --filter "status=exited" -q)
+
 services:
   app:
+    hostname: node-docker               # Set the custom hostname
     build:
       context: ..                       # Context is one level above
       dockerfile: docker/nodejs.docker  # Path to Dockerfile inside the project
     ports:
       - "3000:3000"
     volumes:
-      - ./src:/usr/src/app/src     # Only mount the source directory for development
-      - ./dist:/usr/src/app/dist   # Ensure the compiled code is mapped correctly
-      - /usr/src/app/node_modules  # Avoid overriding the node_modules in the container
+      - ../src:/usr/src/app/src     # Only mount the source directory for development
+      - ../dist:/usr/src/app/dist   # Ensure the compiled code is mapped correctly
+      - /usr/src/app/node_modules   # Avoid overriding the node_modules in the container
     environment:
       NODE_ENV: development  # Set default environment variable for development
     command: npm run dev     # Useful for running development with hot-reload
