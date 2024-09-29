@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "ts": "npx ts-node -r tsconfig-paths/register",
-    "build": "tsc src/index.ts",
+    "build": "tsc",
     "start": "ts-node -r tsconfig-paths/register src/dsa/demo/queue_demo.ts",
     "dev": "ts-node -r tsconfig-paths/register src/dsa/demo/queue_demo.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
