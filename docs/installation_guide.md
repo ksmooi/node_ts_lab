@@ -53,7 +53,7 @@ To set up your Node.js application with TypeScript and support for various libra
    This command installs the main packages required for your project. These include popular libraries for databases, messaging, cloud providers, WebSockets, and utilities.
    
    ```bash
-   npm install nodemon pm2 commander sqlite3 pg mysql2 mongodb ioredis dgraph-js qdrant-client amqplib express axios ws socket.io socket.io-client @grpc/grpc-js @grpc/proto-loader @aws-sdk/client-s3 @aws-sdk/client-sns @aws-sdk/client-sqs @azure/identity @azure/storage-blob @google-cloud/storage dotenv class-validator typeorm
+   npm install nodemon pm2 commander fs-extra sqlite3 pg mysql2 mongodb ioredis dgraph-js qdrant-client amqplib express axios body-parser ws socket.io socket.io-client @grpc/grpc-js @grpc/proto-loader @aws-sdk/client-s3 @aws-sdk/client-sns @aws-sdk/client-sqs @azure/identity @azure/storage-blob @google-cloud/storage dotenv class-validator typeorm
    ```
 
    - **Database libraries**: `sqlite3`, `pg` (PostgreSQL), `mysql2`, `mongodb`, `ioredis` (Redis), `dgraph-js`, `qdrant-client` (vector database).
@@ -74,7 +74,7 @@ To set up your Node.js application with TypeScript and support for various libra
    Install the necessary TypeScript type definitions for development to enable strong typing for the above libraries.
    
    ```bash
-   npm install --save-dev @types/node @types/nodemon @types/commander @types/sqlite3 @types/express @types/ws @types/socket.io @types/socket.io-client @types/pg @types/mongodb
+   npm install --save-dev @types/node @types/nodemon @types/commander @types/fs-extra @types/sqlite3 @types/express @types/axios @types/body-parser @types/ws @types/socket.io @types/socket.io-client @types/pg @types/mongodb
    ```
 
    - **@types/node**: Type definitions for Node.js.
