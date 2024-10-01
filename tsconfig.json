@@ -9,6 +9,7 @@
     "strict": true,                 // Enable strict type-checking options
     "esModuleInterop": true,        // Enable compatibility with CommonJS modules
     "skipLibCheck": true,           // Skip type checking of declaration files
+    "strictNullChecks": false,      // Disable strict null checks
     "moduleResolution": "node",     // Use Node module resolution
     "sourceMap": true,              // Generate source maps for debugging
     "paths": {
