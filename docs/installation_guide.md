@@ -53,7 +53,7 @@ To set up your Node.js application with TypeScript and support for various libra
    This command installs the main packages required for your project. These include popular libraries for databases, messaging, cloud providers, WebSockets, and utilities.
    
    ```bash
-   npm install nodemon pm2 commander fs-extra sqlite3 pg mysql2 mongodb ioredis dgraph-js qdrant-client amqplib express axios body-parser ws socket.io socket.io-client uNetworking/uWebSockets.js#v20.48.0 @grpc/grpc-js @grpc/proto-loader @aws-sdk/client-s3 @aws-sdk/client-sns @aws-sdk/client-sqs @azure/identity @azure/storage-blob @google-cloud/storage dotenv class-validator typeorm
+   npm install nodemon pm2 commander fs-extra protobufjs ts-proto sqlite3 pg mysql2 mongodb ioredis dgraph-js qdrant-client amqplib express axios body-parser ws socket.io socket.io-client uNetworking/uWebSockets.js#v20.48.0 @grpc/grpc-js @grpc/proto-loader @aws-sdk/client-s3 @aws-sdk/client-sns @aws-sdk/client-sqs @azure/identity @azure/storage-blob @google-cloud/storage dotenv class-validator typeorm
    ```
 
    - **Database libraries**: `sqlite3`, `pg` (PostgreSQL), `mysql2`, `mongodb`, `ioredis` (Redis), `dgraph-js`, `qdrant-client` (vector database).
