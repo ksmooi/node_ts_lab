@@ -1,0 +1,48 @@
+// pbjs -t static-module -w commonjs -o ./src/apps/api_grpc_websocket/generated/product_pb.js ./src/apps/api_grpc_websocket/product.proto
+// pbts -o ./src/apps/api_grpc_websocket/generated/product_pb.d.ts ./src/apps/api_grpc_websocket/generated/product_pb.js
+
+syntax = "proto3";
+
+package mypackage;
+
+message Empty {}
+
+message Product {
+  int32 id = 1;
+  string name = 2;
+  string description = 3;
+  double price = 4;
+}
+
+message GetProductRequest {
+  int32 id = 1;
+}
+
+message CreateProductRequest {
+  Product product = 1;
+}
+
+message UpdateProductRequest {
+  Product product = 1;
+}
+
+message DeleteProductRequest {
+  int32 id = 1;
+}
+
+message ListProductsResponse {
+  repeated Product products = 1;
+}
+
+message Envelope {
+  string method = 1;
+  bytes payload = 2;
+}
+
+service ProductService {
+  rpc GetProduct(GetProductRequest) returns (Product);
+  rpc CreateProduct(CreateProductRequest) returns (Product);
+  rpc UpdateProduct(UpdateProductRequest) returns (Product);
+  rpc DeleteProduct(DeleteProductRequest) returns (Empty);
+  rpc ListProducts(Empty) returns (ListProductsResponse);
+}
