@@ -132,18 +132,24 @@ Add the following configuration:
 ```json
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "commonjs",
-    "outDir": "./dist",
-    "strict": true,
-    "esModuleInterop": true,
-    "baseUrl": "./src",   // Set the base URL for path aliases
+    "target": "ES2021",             // Target ECMAScript version
+    "lib": ["ES2021"],              // Use ES2021 library (removed DOM for Node.js projects)
+    "outDir": "./dist",             // Output compiled files here
+    "rootDir": "./src",             // Specify where the source files are located
+    "baseUrl": "./src",             // Base directory for module resolution
+    "module": "CommonJS",           // For Node.js compatibility
+    "strict": true,                 // Enable strict type-checking options
+    "esModuleInterop": true,        // Enable compatibility with CommonJS modules
+    "skipLibCheck": true,           // Skip type checking of declaration files
+    "moduleResolution": "node",     // Use Node module resolution
+    "sourceMap": true,              // Generate source maps for debugging
     "paths": {
-      "modules/*": ["modules/*"]  // Create alias for the "modules" directory
+      "@modules/*": ["modules/*"],
+      "@services/*": ["services/*"]
     }
   },
-  "include": ["src/**/*.ts"],  // Include all TypeScript files in src/
-  "exclude": ["node_modules"]  // Exclude node_modules
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
 ```
 
