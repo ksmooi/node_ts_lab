@@ -60,7 +60,7 @@ To expand your Node.js environment, you can install a variety of popular librari
 
 ### Install Key Libraries:
 ```bash
-npm install nodemon pm2 commander fs-extra sqlite3 pg mysql2 mongodb ioredis dgraph-js qdrant-client amqplib express axios body-parser ws socket.io socket.io-client @grpc/grpc-js @grpc/proto-loader @aws-sdk/client-s3 @aws-sdk/client-sns @aws-sdk/client-sqs @azure/identity @azure/storage-blob @google-cloud/storage dotenv class-validator typeorm
+npm install nodemon pm2 commander fs-extra sqlite3 pg mysql2 mongodb ioredis dgraph-js qdrant-client amqplib express axios body-parser ws socket.io socket.io-client uNetworking/uWebSockets.js#v20.48.0 @grpc/grpc-js @grpc/proto-loader @aws-sdk/client-s3 @aws-sdk/client-sns @aws-sdk/client-sqs @azure/identity @azure/storage-blob @google-cloud/storage dotenv class-validator typeorm
 ```
 
 ### Install Development TypeScript Definitions:
