@@ -1,0 +1,42 @@
+// protoc --experimental_allow_proto3_optional --plugin=protoc-gen-ts_proto=node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=src/apps/api_grpc_tsproto/generated --ts_proto_opt=outputServices=grpc-js,useOptionals=messages,esModuleInterop=true -I src/apps/api_grpc_tsproto src/apps/api_grpc_tsproto/product.proto
+
+syntax = "proto3";
+
+package apisvc;
+
+message Empty {}
+
+message Product {
+  optional int32 id = 1;
+  string name = 2;
+  string description = 3;
+  double price = 4;
+}
+
+message GetProductRequest {
+  int32 id = 1;
+}
+
+message CreateProductRequest {
+  Product product = 1;
+}
+
+message UpdateProductRequest {
+  Product product = 1;
+}
+
+message DeleteProductRequest {
+  int32 id = 1;
+}
+
+message ListProductsResponse {
+  repeated Product products = 1;
+}
+
+service ProductService {
+  rpc GetProduct(GetProductRequest) returns (Product);
+  rpc CreateProduct(CreateProductRequest) returns (Product);
+  rpc UpdateProduct(UpdateProductRequest) returns (Product);
+  rpc DeleteProduct(DeleteProductRequest) returns (Empty);
+  rpc ListProducts(Empty) returns (ListProductsResponse);
+}
