@@ -60,12 +60,12 @@ To expand your Node.js environment, you can install a variety of popular librari
 
 ### Install Key Libraries:
 ```bash
-npm install nodemon pm2 commander fs-extra protobufjs ts-proto sqlite3 pg mysql2 mongodb ioredis dgraph-js qdrant-client amqplib express axios body-parser ws socket.io socket.io-client uNetworking/uWebSockets.js#v20.48.0 @grpc/grpc-js @grpc/proto-loader @aws-sdk/client-s3 @aws-sdk/client-sns @aws-sdk/client-sqs @azure/identity @azure/storage-blob @google-cloud/storage dotenv class-validator typeorm
+npm install nodemon pm2 commander fs-extra protobufjs ts-proto sqlite3 pg mysql2 mongodb mongoose ioredis dgraph-js qdrant-client amqplib express axios body-parser ws socket.io socket.io-client uNetworking/uWebSockets.js#v20.48.0 @grpc/grpc-js @grpc/proto-loader @aws-sdk/client-s3 @aws-sdk/client-sns @aws-sdk/client-sqs @azure/identity @azure/storage-blob @google-cloud/storage dotenv class-validator typeorm inquirer cors winston morgan
 ```
 
 ### Install Development TypeScript Definitions:
 ```bash
-npm install --save-dev @types/node @types/nodemon @types/commander @types/fs-extra @types/sqlite3 @types/express @types/axios @types/body-parser @types/ws @types/socket.io @types/socket.io-client @types/pg @types/mongodb
+npm install --save-dev @types/node @types/nodemon @types/commander @types/fs-extra @types/sqlite3 @types/ioredis @types/express @types/axios @types/body-parser @types/ws @types/socket.io @types/socket.io-client @types/pg @types/mongodb @types/inquirer @types/morgan
 ```
 
 Here’s an introduction to all the libraries mentioned in **Step 3: Install TypeScript Libraries (Optional)**, which are essential for expanding a Node.js environment with TypeScript. These libraries enable interaction with databases, cloud services, messaging systems, and more.
