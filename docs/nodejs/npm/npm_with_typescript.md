@@ -28,7 +28,6 @@ Here’s an example of a minimal `package.json` file:
   "description": "A sample project using TypeScript",
   "main": "dist/index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
     "build": "tsc",
     "test": "jest"
   },
@@ -190,7 +189,6 @@ Here’s an example of some useful NPM scripts for a TypeScript project:
 
 ```json
 "scripts": {
-  "start": "ts-node src/index.ts",    // Run the TypeScript app directly
   "build": "tsc",                     // Compile TypeScript to JavaScript
   "test": "jest",                     // Run tests
   "lint": "eslint src/**/*.ts"        // Lint the TypeScript code
@@ -245,7 +243,6 @@ If you want to run your TypeScript code without compiling it first, you can use 
 
 ```json
 "scripts": {
-  "start": "ts-node src/index.ts"
 }
 ```
 
